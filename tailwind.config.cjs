@@ -1,8 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: [
+    './src/**/*.{html,js,svelte,ts}',
+  ],
   theme: {
-    extend: {},
+    extend: {
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@catppuccin/tailwindcss')({
+      defaultFlavor: 'mocha'
+    }),
+  ],
 }
